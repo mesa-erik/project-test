@@ -29,18 +29,12 @@ export default function Index() {
                     View Notes for {user.email}
                   </Link>
                 ) : (
-                  <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
+                  <div className="">
                     <Link
-                      to="/join"
+                      to="/notes"
                       className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-[#0f2d52] shadow-sm hover:bg-yellow-50 sm:px-8"
                     >
-                      Sign up
-                    </Link>
-                    <Link
-                      to="/login"
-                      className="flex items-center justify-center rounded-md bg-[#0f2d52] px-4 py-3 font-medium text-white hover:bg-[#0f2d52]"
-                    >
-                      Log In
+                      Next Page
                     </Link>
                   </div>
                 )}
