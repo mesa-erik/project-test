@@ -1,34 +1,21 @@
-import type { Contact } from "@prisma/client";
 import type { LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
-import { prisma } from "~/db.server";
 
 // Define the type for the data that will be passed to the client
-type LoaderData = { contacts: Contact[] };
+//type LoaderData = ...;
 
 export async function loader({ request }: LoaderArgs) {
   // Write a query that retrieves all contacts from the contacts table
-  const result: Contact[] = await prisma.$queryRaw`SELECT id,
-                                                   first_name AS "firstName", 
-                                                   last_name AS "lastName", 
-                                                   age, 
-                                                   company, 
-                                                   department
-                                                   FROM contacts`;
-  console.log(result);
+  //await prisma.$queryRaw``;
 
   // Process the data so that only contacts who have engineering in their department name
   // are sent to the client
-  const filteredContacts = result.filter((contact) =>
-    contact.department.includes("Engineering")
-  );
 
   // Send the filtered list to the client
-  const data: LoaderData = {
-    contacts: filteredContacts,
-  };
-  return json(data);
+  //const data: LoaderData = ...
+  //return json(data);
+  return json([]);
 }
 
 export default function ContactsPage() {
@@ -40,12 +27,6 @@ export default function ContactsPage() {
         <h1 className="text-3xl font-bold">
           <Link to=".">Contacts</Link>
         </h1>
-        <Link
-          to="/"
-          className="flex items-center justify-center rounded-md border border-transparent bg-slate-100 px-4 py-3 text-base font-medium text-[#0f2d52] shadow-sm hover:bg-yellow-50 sm:px-8"
-        >
-          Home Page
-        </Link>
       </header>
 
       <main className="flex h-full flex-row bg-white">
@@ -67,7 +48,8 @@ export default function ContactsPage() {
                 </tr>
               </thead>
               <tbody>
-                {data.contacts.map((contact) => (
+                {/* Will display contact data, uncomment when data is being sent.
+                 {data.contacts.map((contact) => (
                   <tr
                     key={contact.id}
                     className={
@@ -88,7 +70,7 @@ export default function ContactsPage() {
                     </td>
                     <td className="p-2">{contact.department}</td>
                   </tr>
-                ))}
+                ))} */}
               </tbody>
             </table>
           </div>
