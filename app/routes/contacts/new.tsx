@@ -33,7 +33,7 @@ export default function NewContactPage() {
           width: "100%",
         }}
       >
-        {/* <div>
+        {/*A styled input field for reference <div>
           <label className="flex w-full flex-col gap-1">
             <span>First Name: </span>
             <input
