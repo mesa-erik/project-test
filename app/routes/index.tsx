@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+
 export default function Index() {
   return (
     <main className="relative min-h-screen bg-white sm:flex sm:items-center sm:justify-center">
@@ -16,8 +18,7 @@ export default function Index() {
                 complete this project.
               </p>
               <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
-                <div className="">
-                </div>
+                <div className=""></div>
               </div>
             </div>
           </div>

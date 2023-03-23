@@ -16,9 +16,9 @@ export async function loader({ request }: LoaderArgs) {
   // are sent to the client
 
   // Send the filtered list to the client instead of the empty array
-
   //const data: LoaderData = {}
   //return json(data);
+
   return json([]);
 }
 
