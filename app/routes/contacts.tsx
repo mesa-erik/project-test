@@ -1,19 +1,23 @@
 import type { LoaderArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { Link, Outlet, useLoaderData } from "@remix-run/react";
+import { prisma } from "~/db.server";
+import type { Contact } from "@prisma/client";
 
 // Define the type for the data that will be passed to the client
-//type LoaderData = ...;
+
+//type LoaderData = {}
 
 export async function loader({ request }: LoaderArgs) {
   // Write a query that retrieves all contacts from the contacts table
-  //await prisma.$queryRaw``;
+  //const results = await prisma.$queryRaw` SQL goes here `;
 
   // Process the data so that only contacts who have engineering in their department name
   // are sent to the client
 
-  // Send the filtered list to the client
-  //const data: LoaderData = ...
+  // Send the filtered list to the client instead of the empty array
+
+  //const data: LoaderData = {}
   //return json(data);
   return json([]);
 }

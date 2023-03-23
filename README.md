@@ -20,6 +20,12 @@ npm run dev
 4. Once the development server is running the application will be available on localhost:3000, you will need to click refresh to see any changes you have made to the code while the server is running.
 
 # Project Requirements
+Remix Documentation:
+https://remix.run/docs/en/1.14.3
+
+Prisma Documentation:
+https://www.prisma.io/docs
+
 The goal will be to complete a basic web application which displays contacts in a table and allows a user to add a new contact via a form (you may assume that the form fields match the model exactly and that all fields are required). Many tasks are outlined in the source code files but you are to free to complete the requirements however you feel is best.
 
 ## Home page (app/routes/index.tsx)
@@ -32,7 +38,7 @@ The goal will be to complete a basic web application which displays contacts in 
 4. In code (not in the sql query itself) get only the contacts whose department contains the word Engineering and send only the filtered results to the client.
 
 ## New Contact Form (app/routes/contacts/new.tsx)
-1. Create a form with inputs for all attribute of the Contact model.
+1. Create a form with inputs for all attributes of the Contact model.
     * All fields are required.
     * Company should be selected from a dropdown list with the options Microsoft, Apple, and Google.
     * Department should be selected from a dropdown list with the options Software Engineering, Hardware Engineering, Sales, and Marketing

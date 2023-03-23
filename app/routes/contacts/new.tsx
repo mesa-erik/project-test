@@ -1,16 +1,17 @@
-import type { ActionArgs } from "@remix-run/node";
+import type { ActionArgs} from "@remix-run/node";
+import { redirect } from "@remix-run/node";
 import { Form, Link } from "@remix-run/react";
 import { prisma } from "~/db.server";
 
 export async function action({ request }: ActionArgs) {
   // Get the data from the form here
-  //const formData = ...
+  const formData = await request.formData();
 
   // Insert the form data into the contacts table
   await prisma.$queryRaw``;
 
   // Navigate back to the contacts page
-  //return ...
+  return redirect(`..`);
 }
 
 export default function NewContactPage() {
